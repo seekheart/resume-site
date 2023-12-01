@@ -6,12 +6,12 @@ export const App = () => {
         {path: '/', linkName: 'Home'}
     ]
 
-  return (
-    <>
-        <div className="flex h-screen">
-            <SideNav routes={routes}/>
-            <Outlet/>
-        </div>
-    </>
-  )
+    return (
+        <>
+            <div className="flex h-screen">
+                <SideNav routes={routes}/>
+                <Outlet/>
+            </div>
+        </>
+    )
 }
