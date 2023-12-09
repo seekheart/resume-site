@@ -4,7 +4,7 @@ interface AvatarIconProps {
     className?: string;
 }
 
-export const AvatarIcon = ({imagePath, altText, className}: AvatarIconProps) => {
+export const AvatarIcon = ({imagePath, altText, className=''}: AvatarIconProps) => {
     const defaultClasses = 'rounded-full';
     const iconClasses = [...new Set(`${className} ${defaultClasses}`.split(' '))].join(' ');
 

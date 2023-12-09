@@ -4,7 +4,8 @@ import {App} from './App.tsx'
 import './index.css'
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
 import {HomePage} from "./pages/home/HomePage.tsx";
-import {JobsPage} from "./pages/jobs/JobsPage.tsx";
+import {JobLoader, JobsPage} from "./pages/jobs/JobsPage.tsx";
+import {jobs} from "./services/JobService.ts";
 
 const router = createBrowserRouter([
     {
@@ -18,6 +19,7 @@ const router = createBrowserRouter([
             {
                 path: '/jobs/:id',
                 element: <JobsPage/>,
+                loader: JobLoader
             }
         ]
     },

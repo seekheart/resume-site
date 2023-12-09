@@ -16,18 +16,18 @@ const IntroBlock = () => {
 
 const ContactBlock = () => {
     const links = [
-        {link: "mailto:miketung2013@gmail.com", icon: faEnvelope},
-        {link: "https://www.linkedin.com/in/mitung/", icon: faLinkedinIn},
-        {link: "https://github.com/seekheart", icon: faGithub}
+        {id: 1, link: "mailto:miketung2013@gmail.com", icon: faEnvelope},
+        {id: 2, link: "https://www.linkedin.com/in/mitung/", icon: faLinkedinIn},
+        {id: 3, link: "https://github.com/seekheart", icon: faGithub}
     ]
 
     return (
         <div className="flex-col px-16 w-fit">
             <h2 className="font-semibold text-header text-white">Contact Me</h2>
             <ul className="list-none flex gap-4 items-center">
-                {links.map(({link, icon})=> {
+                {links.map(({id, link, icon})=> {
                     return (
-                        <li>
+                        <li key={id}>
                             <a className="inline-flex gap-6 text-white mb-4" href={link}>
                                 <FontAwesomeIcon className="h-14 w-14 text-emerald" icon={icon}/>
                             </a>
