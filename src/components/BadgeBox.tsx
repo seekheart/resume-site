@@ -13,8 +13,8 @@ export const BadgeBox = ({badges}: BadgeBoxProps) => {
             <div className="grid grid-cols-2 gap-8 py-16 px-32 justify-items-center">
                 {badges && badges.map(b => {
                     return (
-                        <div className="w-60 h-60">
-                            <NavLink to={b.link} id={b.id}>
+                        <div className="w-60 h-60" key={b.id}>
+                            <NavLink to={b.link}>
                             <img className="rounded-full ring-white ring-2 w-60 h-60" src={b.icon} alt="jobIcon"/>
                             </NavLink>
                         </div>

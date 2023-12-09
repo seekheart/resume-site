@@ -23,7 +23,6 @@ const JobDescriptor = ({heading, text}: JobDescriptorProps) => {
 
 export const JobsPage = () => {
     const job = useLoaderData() as Job;
-    console.log(job);
     return (
         <div className="py-[112px] px-[140px]">
             <div className="bg-transparent border rounded w-[800px] h-[800px]">
