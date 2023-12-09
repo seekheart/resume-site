@@ -10,7 +10,6 @@ export default {
                 'midnight-green': '#073B3A',
                 'emerald': '#21D375',
                 'dartmouth-green': '#0B6E4F',
-
             },
             fontFamily: {
                 lora: ['Lora', 'serif'],

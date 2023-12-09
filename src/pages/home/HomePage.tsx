@@ -1,9 +1,14 @@
+import {Badge, BadgeBox} from "../../components/BadgeBox.tsx";
+import {jobs} from "../../services/JobService.ts";
+
 export const HomePage = () => {
+    const jobBadges: Badge[] = jobs.map(j => {
+        return {id: j.id, icon: `src/assets/${j.icon}`, link: j.link}
+    })
+
     return (
-        <div className="w-full h-full flex-col pt-24 px-24">
-            <div className="bg-blue-400 w-full h-1/4">
-                Lorem Ipsum Stuff
-            </div>
+        <div className="w-full h-full flex-col pt-64 px-16">
+            <BadgeBox badges={jobBadges}/>
         </div>
     )
 }

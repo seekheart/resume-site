@@ -22,7 +22,7 @@ const ContactBlock = () => {
     ]
 
     return (
-        <div className="flex-col px-16">
+        <div className="flex-col px-16 w-fit">
             <h2 className="font-semibold text-header text-white">Contact Me</h2>
             <ul className="list-none flex gap-4 items-center">
                 {links.map(({link, icon})=> {

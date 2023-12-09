@@ -4,6 +4,7 @@ import {App} from './App.tsx'
 import './index.css'
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
 import {HomePage} from "./pages/home/HomePage.tsx";
+import {JobsPage} from "./pages/jobs/JobsPage.tsx";
 
 const router = createBrowserRouter([
     {
@@ -13,9 +14,13 @@ const router = createBrowserRouter([
             {
                 index: true,
                 element: <HomePage/>
+            },
+            {
+                path: '/jobs/:id',
+                element: <JobsPage/>,
             }
         ]
-    }
+    },
 ])
 ReactDOM.createRoot(document.getElementById('root')!).render(
     <React.StrictMode>
