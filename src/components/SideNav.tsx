@@ -2,6 +2,7 @@ import {AvatarIcon} from "./AvatarIcon.tsx";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faEnvelope} from "@fortawesome/free-solid-svg-icons";
 import {faGithub, faLinkedinIn} from "@fortawesome/free-brands-svg-icons";
+import {useNavigate} from "react-router-dom";
 
 
 const IntroBlock = () => {
@@ -40,9 +41,15 @@ const ContactBlock = () => {
 }
 
 export const SideNav = () => {
+    const navigate = useNavigate();
+
+    const returnHome = () => {
+        navigate('/');
+    }
+
     return (
         <div className="flex-col w-25 h-full bg-midnight-green justify-center">
-            <div className="px-20 py-16 pb-1.5">
+            <div className="px-20 py-16 pb-1.5" onClick={returnHome}>
                 <AvatarIcon
                     imagePath={"src/assets/selfie.jpg"}
                     altText={"stuff"}

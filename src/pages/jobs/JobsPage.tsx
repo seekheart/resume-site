@@ -36,9 +36,9 @@ export const JobsPage = () => {
                     </div>
                 </div>
                 <div className="flex-col">
-                    <JobDescriptor heading="role" text={job.role}/>
-                    <JobDescriptor heading="bio" text={job.description}/>
-                    <JobDescriptor heading="tech" text={job.techStack}/>
+                    <JobDescriptor heading="Role" text={job.role}/>
+                    <JobDescriptor heading="Bio" text={job.description}/>
+                    <JobDescriptor heading="Tech" text={job.techStack}/>
                 </div>
             </div>
         </div>
